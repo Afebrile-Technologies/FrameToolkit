@@ -21,3 +21,9 @@ A comprehensive utility library for ASP.NET Core development that provides essen
 
 ```bash
 dotnet add package FrameToolkit.AspNetCore
+```
+
+
+## Getting Started
+
+See the full usage guide and examples: [Getting Started](GETTING_STARTED.md)
