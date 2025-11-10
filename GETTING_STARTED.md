@@ -1,4 +1,4 @@
-# Getting Started — FrameToolkit.AspNetCore
+# Getting Started â€” FrameToolkit.AspNetCore
 
 This guide shows quick examples for using the utilities and abstractions provided by this project in an ASP.NET Core Minimal API application.
 
@@ -21,10 +21,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointDefinitions();      // scans and registers IEndpointDefinition implementations
 builder.Services.AddDomainEventService();      // discovers and registers IDomainEventHandler<T> and IDomainEventsDispatcher
 builder.Services.AddCommandQueryDefinitions(); // discovers and registers command/query handlers
-
-// Register Dispatcher implementations (open generic + non-generic)
-builder.Services.AddScoped(typeof(IDispatcher<,>), typeof(Dispatcher<,>));
-builder.Services.AddScoped<IDispatcher, Dispatcher>();
 
 var app = builder.Build();
 
